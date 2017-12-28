@@ -425,17 +425,12 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>${cobertura.version}</version>
-                        <dependencies>
-                            <dependencies>
-                                <exclusions>
-                                    <exclusion>
-                                        <groupId>org.slf4j</groupId>
-                                        <artifactId>slf4j-simple</artifactId>
-                                    </exclusion>
-                                </exclusions>
-                            </dependencies>
-                        </dependencies>
                         <configuration>
+                            <instrumentation>
+                                <excludes>
+                                    <exclude>org/slf4j/impl/StaticLoggerBinder.class</exclude>
+                                </excludes>
+                            </instrumentation>
                             <formats>
                                 <format>html</format>
                                 <format>xml</format>

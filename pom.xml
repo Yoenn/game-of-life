@@ -425,12 +425,12 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>${cobertura.version}</version>
-                        <executions>
-                            <execution>
-                                <groupId>ch.qos.logback</groupId>
-                                <artifactId>logback-parent</artifactId>
-                            </execution>
-                        </executions>
+                         <exclusions>
+                            <exclusion>
+                                <groupId>org.slf4j</groupId>
+                                <artifactId>slf4j-simple</artifactId>
+                            </exclusion>
+                        </exclusions>
                         <configuration>
                             <formats>
                                 <format>html</format>

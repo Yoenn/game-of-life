@@ -208,7 +208,6 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>cobertura-maven-plugin</artifactId>
             <version>2.6</version>
-            <scope>test</scope>
                 <exclusions>
                     <exclusion>
                         <groupId>ch.qos.logback</groupId>
